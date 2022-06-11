@@ -24,7 +24,7 @@ class ResultadoEncuestaController extends Controller
      */
     public function create()
     {
-        //
+        var_dump("test");
     }
 
     /**
