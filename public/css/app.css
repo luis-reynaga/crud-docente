@@ -1,0 +1,220 @@
+
+:root{
+    --white-color: #FFFFFF;
+    --dark-green: #081C15;
+    --light-green: #52B788;
+    --gray: #EBEBEB;
+    --cerulean-crayola: #00B4D8;
+    --sky-blue-crayola: #90E0EF;
+    --dark-gray: #8D8D8D;
+ 
+    --primary-font: 'Open Sans', sans-serif;
+    --secodary-font: 'Fredoka One', cursive;
+ }
+ html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+ 
+ *,*::after, *::before{
+    box-sizing: inherit;
+ }
+ 
+ body{
+    font-size: 1.6rem;
+    height: 100vh;
+    background-color: var(--gray);
+    font-family: var(--primary-font);
+ }
+ 
+ h1{
+    font-size: 3.2rem;
+ }
+ h2{
+    font-size: 3rem;
+ }
+ h3{
+    font-size: 1.8rem;
+ }
+ 
+ img{
+    max-width: 100%;
+ }
+ 
+ h1, h2, h3{
+    font-family: var(--secodary-font);
+ }
+ 
+ ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+ .app-wrapper{
+    height: 100%;
+    display: flex;
+ 
+ }
+ 
+ .content-app{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ .site-header{
+    background-color: var(--white-color);
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    height: 6rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ 
+ .header-information{
+    display: grid;
+    grid-template-columns: 2rem 20rem 4rem;
+    column-gap: 1rem;
+    align-items: center;
+ }
+ .header-information h2{
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--dark-gray);
+ }
+ 
+ .header-information img{
+    height: 4rem;
+ }
+ 
+ #menu-collapse{
+    cursor: pointer;
+ }
+ /**Sidebar*/
+ .sidebar{
+    display: none;
+ }
+ @media (min-width: 760px){
+    .sidebar{
+       background-color: var(--white-color);
+       width: 25rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+    }
+    .system-logo{
+       background-color: var(--light-green);
+       height: 6rem;
+       padding-right: 2rem;
+       padding-left: 2rem;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+    }
+    .system-logo img{
+       height: 4rem;
+    }
+    .site-name{
+       font-size: 1.6rem;
+       text-align: center;
+       color: var(--white-color);
+    }
+    
+    .option-sidebar{
+       flex: 1;
+       margin-top: 3rem;
+    }
+    .list-options{
+       border-top: 1px solid var(--gray);
+    }
+    .list-options li{
+       padding: 1rem 2rem;
+       border-bottom: 1px solid var(--gray);
+    }
+    .list-options li a{
+      text-decoration: none;
+      display: block;
+      color: var(--dark-green);
+   }
+    .list-options li:hover{
+       cursor: pointer;
+       background-color: var(--gray);
+    }
+    .active{
+       border-left: 0.5rem solid var(--light-green);
+       background-color: #f8f7f7;
+    }
+    
+    .footer-list{
+       margin-bottom: 3rem;
+    }
+ }
+ 
+ 
+ 
+ /**Main*/
+ .site-main{
+    flex: 1;
+    padding: 2rem 4rem;
+ }
+ .site-main .search-result{
+    color: var(--cerulean-crayola);
+    text-transform: uppercase;
+    margin: 0;
+ }
+ .breadcrumb{
+    display: flex;
+    font-family: var(--secodary-font);
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    color: var(--dark-gray);
+ }
+ 
+ .main-content{
+    background-color: var(--white-color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 2rem;
+ }
+ table{
+    width: 100%;
+    border-collapse: collapse;
+ }
+ .table-mobil{
+    overflow-x: auto;
+ }
+ 
+ table th, td{
+    border: 1px solid var(--dark-gray);
+ }
+ table thead{
+    text-transform: uppercase;
+    background-color: var(--cerulean-crayola);
+    height: 3rem;
+    font-weight: bold;
+ }
+ 
+ .site-footer{
+    background-color: var(--white-color);
+    height: 6rem;
+    border-left: 1px solid var(--gray);
+ }
+ 
+ /****EVENT FROM JAVASCRIPT*********/
+ .hide-collpase{
+    width: 5rem;
+ }
+ 
+ .new-style-logo{
+    padding: 0;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+ }
+ .show{
+    display: block;
+ }
+ 
+ .hide{
+    display: none;
+ }
