@@ -32,8 +32,8 @@
                         class="{{ request()->routeIs('resultado.index') || request()->routeIs('') ? 'active' : '' }}"><a
                             href="{{ route('resultado.index') }}"><i class="fa-solid fa-file-arrow-down"></i>
                             <span>Resultado de encuestas</span></a></li>
-                    <li title="Docente" class="{{ request()->routeIs('docente.index') ? 'active' : '' }}"><a
-                            href="{{ route('docente.index') }}"><i class="fa-solid fa-graduation-cap"></i>
+                    <li title="Docente" class="{{ request()->routeIs('docente.create') ? 'active' : '' }}"><a
+                            href="{{ route('docente.create') }}"><i class="fa-solid fa-graduation-cap"></i>
                             <span>Docentes</span></a></li>
                     <li title="Encuestas"><a href=""><i class="fa-brands fa-telegram"></i> <span>Encuestas</span></a>
                     </li>
@@ -82,7 +82,7 @@
             <footer class="site-footer">Footer</footer>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
     <script src="{{ 'js/app.js' }}"></script>
 </body>
 

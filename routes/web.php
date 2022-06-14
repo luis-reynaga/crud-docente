@@ -21,4 +21,6 @@ Route::get('', function () {
 })->name("");
 Route::get('resultado-encuesta', [ResultadoEncuestaController::class, 'index'])->name("resultado.index");
 Route::get('comision-encuesta', [ComisionEncuestaController::class, 'index'])->name("comision.index");
-Route::get('docente', [DocenteController::class, 'index'])->name("docente.index");
+Route::get('docente', [DocenteController::class, 'create'])->name("docente.create");
+Route::post('docente', [DocenteController::class, 'store'])->name('docente.store');
+Route::post('docente/{codigo}', [DocenteController::class, 'destroy'])->name('docente.destroy');

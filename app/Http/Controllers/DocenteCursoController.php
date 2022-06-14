@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ResultadoEncuesta;
 use App\Models\DocenteCurso;
 use Illuminate\Http\Request;
 
-class ResultadoEncuestaController extends Controller
+class DocenteCursoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,14 +14,7 @@ class ResultadoEncuestaController extends Controller
      */
     public function index()
     {
-        $docentes = DocenteCurso::join('docentes', 'docentes.id', '=', 'docente_cursos.docente_id')
-        ->join('cursos', 'cursos.id', '=', 'docente_cursos.curso_id')
-        ->select('docentes.codigo', 'docentes.nombres', 'docente_cursos.cantidad_alumnos', 'cursos.nombre')
-        ->get();
-        
-        
-
-        return view("resultado.index", compact("docentes"));
+        //
     }
 
     /**
@@ -32,7 +24,7 @@ class ResultadoEncuestaController extends Controller
      */
     public function create()
     {
-        var_dump("test");
+        //
     }
 
     /**
@@ -49,10 +41,10 @@ class ResultadoEncuestaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ResultadoEncuesta  $resultadoEncuesta
+     * @param  \App\Models\DocenteCurso  $docenteCurso
      * @return \Illuminate\Http\Response
      */
-    public function show(ResultadoEncuesta $resultadoEncuesta)
+    public function show(DocenteCurso $docenteCurso)
     {
         //
     }
@@ -60,10 +52,10 @@ class ResultadoEncuestaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ResultadoEncuesta  $resultadoEncuesta
+     * @param  \App\Models\DocenteCurso  $docenteCurso
      * @return \Illuminate\Http\Response
      */
-    public function edit(ResultadoEncuesta $resultadoEncuesta)
+    public function edit(DocenteCurso $docenteCurso)
     {
         //
     }
@@ -72,10 +64,10 @@ class ResultadoEncuestaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ResultadoEncuesta  $resultadoEncuesta
+     * @param  \App\Models\DocenteCurso  $docenteCurso
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ResultadoEncuesta $resultadoEncuesta)
+    public function update(Request $request, DocenteCurso $docenteCurso)
     {
         //
     }
@@ -83,10 +75,10 @@ class ResultadoEncuestaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ResultadoEncuesta  $resultadoEncuesta
+     * @param  \App\Models\DocenteCurso  $docenteCurso
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ResultadoEncuesta $resultadoEncuesta)
+    public function destroy(DocenteCurso $docenteCurso)
     {
         //
     }
