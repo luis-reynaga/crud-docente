@@ -14,7 +14,7 @@ class ComisionEncuestaController extends Controller
      */
     public function index()
     {
-        
+        var_dump("Isue");
     }
 
     /**
